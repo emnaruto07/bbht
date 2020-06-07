@@ -38,7 +38,7 @@ select choice in "${choices[@]}"; do
 					echo 'export GOROOT=/usr/local/go' >> ~/.bashrc
 					echo 'export GOPATH=$HOME/go'	>> ~/.bashrc			
 					echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bashrc	
-					source ~/.bash_profile
+					source ~/.bashrc
 					sleep 1
 					break
 					;;
