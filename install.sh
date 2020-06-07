@@ -61,12 +61,6 @@ done
 fi
 
 
-#Don't forget to set up AWS credentials!
-echo "Don't forget to set up AWS credentials!"
-apt install -y awscli
-echo "Don't forget to set up AWS credentials!"
-
-
 
 #create a tools folder in ~/
 mkdir ~/tools
@@ -89,16 +83,13 @@ sudo python setup.py install
 cd ~/tools/
 echo "done"
 
-echo "installing Sublist3r"
-git clone https://github.com/aboul3la/Sublist3r.git
-cd Sublist3r*
-pip install -r requirements.txt
-cd ~/tools/
+echo "installing Subfinder"
+go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
 echo "done"
 
 
-echo "installing teh_s3_bucketeers"
-git clone https://github.com/tomdev/teh_s3_bucketeers.git
+echo "installing Arjun"
+git clone https://github.com/s0md3v/Arjun.git
 cd ~/tools/
 echo "done"
 
@@ -110,16 +101,10 @@ sudo gem install bundler && bundle install --without test
 cd ~/tools/
 echo "done"
 
-echo "installing dirsearch"
-git clone https://github.com/maurosoria/dirsearch.git
-cd ~/tools/
+echo "installing ffuf"
+go get github.com/ffuf/ffuf
 echo "done"
 
-
-echo "installing lazys3"
-git clone https://github.com/nahamsec/lazys3.git
-cd ~/tools/
-echo "done"
 
 echo "installing virtual host discovery"
 git clone https://github.com/jobertabma/virtual-host-discovery.git
@@ -134,11 +119,6 @@ echo "done"
 
 echo "installing knock.py"
 git clone https://github.com/guelfoweb/knock.git
-cd ~/tools/
-echo "done"
-
-echo "installing lazyrecon"
-git clone https://github.com/nahamsec/lazyrecon.git
 cd ~/tools/
 echo "done"
 
@@ -185,8 +165,12 @@ cat dns-Jhaddix.txt | head -n -14 > clean-jhaddix-dns.txt
 cd ~/tools/
 echo "done"
 
+echo "downloading wordlist"
+git clone https://github.com/Sc0rpion2/Wordlists.git
+cd ~/tools/
+echo "done"
+
 
 
 echo -e "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in ~/tools"
 ls -la
-echo "One last time: don't forget to set up AWS credentials in ~/.aws/!"
