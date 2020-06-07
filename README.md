@@ -22,7 +22,7 @@ Bug Bounty Hunting Tools is a script to install the most popular tools used whil
 
 
 # Installing
-- git clone https://github.com/nahamsec/bbht.git
+- git clone https://github.com/Sc0rpion2/bbht
 - cd bbht
 - chmod +x install.sh
 - ./install.sh
