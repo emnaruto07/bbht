@@ -96,6 +96,9 @@ echo "installing ffuf"
 go get github.com/ffuf/ffuf
 echo "done"
 
+echo "installing Amass"
+sudo snap install amass
+echo "done"
 
 echo "installing virtual host discovery"
 git clone https://github.com/jobertabma/virtual-host-discovery.git
